@@ -4,7 +4,8 @@ list=()
 for arg in "$@"; do
     list+=("$arg")
 done;
-
-for arg in "${list[@]}"; do
-    echo "$arg"
+i=${#list[@]}
+while [ "$i" -ne 0 ]; do
+    echo "${list[i-1]}"
+    i=$((i - 1))
 done;

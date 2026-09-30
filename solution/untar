@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 tar="$1"
-name_dir="$(basename "$tar").unpacked"
+name_dir="{$tar}.unpacked"
 check=$(find . -type d -name "$name_dir")
 if [ -n "$check" ]; then
     tar -xf "$tar" -C "$name_dir"
@@ -9,6 +9,3 @@ else
     mkdir "$name_dir" 
     tar -xf "$tar" -C "$name_dir"
 fi
-
-
-

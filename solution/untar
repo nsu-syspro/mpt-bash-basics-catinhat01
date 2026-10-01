@@ -2,10 +2,5 @@
 
 tar="$1"
 name_dir="$tar.unpacked"
-check=$(find . -maxdepth 1 -type d -name "$name_dir")
-if [ -n "$check" ]; then
-    tar -xf "$tar" -C "$name_dir"
-else  
-    mkdir "$name_dir" 
-    tar -xf "$tar" -C "$name_dir"
-fi
+mkdir -p "$name_dir"
+tar -xf "$tar" -C "$name_dir"

@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-list=() 
-for arg in "$@"; do
-    list+=("$arg")
-done;
+list=()
+mapfile -t list
 i=${#list[@]}
 while [ "$i" -ne 0 ]; do
     echo "${list[i-1]}"

@@ -2,7 +2,7 @@
 
 tar="$1"
 name_dir="$tar.unpacked"
-check=$(find . -type d -name "$name_dir")
+check=$(find . -maxdepth 1 -type d -name "$name_dir")
 if [ -n "$check" ]; then
     tar -xf "$tar" -C "$name_dir"
 else  

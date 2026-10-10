@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+tar="$1"
+name_dir="$tar.unpacked"
+mkdir -p "$name_dir"
+tar -xf "$tar" -C "$name_dir"

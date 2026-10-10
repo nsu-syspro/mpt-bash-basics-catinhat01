@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+suffix="$1"
+shift
+
+for name in "$@"; do
+     mv "$name" "$name$suffix"
+done;
+
+
+
